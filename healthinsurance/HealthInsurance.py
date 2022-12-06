@@ -70,9 +70,9 @@ class HealthInsurance( object ):
 
     def get_prediction( self, model, original_data, test_data ):
         # Model Prediction
-        pred = mode.predict_proba( test_data )
+        pred = model.predict_proba( test_data )
         
         # Join Predicton into Original Data
-        original_data['prediction'] = pred
+        original_data['prediction'] = pred[:, 1].tolist()
         
         return original_data.to_json( orient='records', data_format='iso' )
