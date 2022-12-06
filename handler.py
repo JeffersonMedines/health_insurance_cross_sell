@@ -3,6 +3,7 @@ import pickle
 import pandas as pd
 from flask import Flask, request, Response
 from healthinsurance.HealthInsurance import HealthInsurance
+import xgboost as xgb
 
 # Loading Model
 model = pickle.load( open('model/model_cross_sell.pkl', 'rb') )
@@ -11,7 +12,7 @@ model = pickle.load( open('model/model_cross_sell.pkl', 'rb') )
 app = Flask( __name__ )
 @app.route( '/predict', methods=['POST'] )
 
-def health_insurance_predict( object ):
+def health_insurance_predict():
     test_json = request.get_json()
     
     if test_json: # there is data
