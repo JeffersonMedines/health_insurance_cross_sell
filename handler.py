@@ -4,8 +4,7 @@ from flask import Flask, request, Response
 from healthinsurance.HealthInsurance import HealthInsurance
 
 # Loading Model
-path = '/home/jeffsmedines/repos/pa4/health_insurance_cross_sell/'
-model = pickle.load( open(path + 'model/model_cross_sell.pkl', 'rb') )
+model = pickle.load( open('model/model_cross_sell.pkl', 'rb') )
 
 # Initialize API
 app = Flask( __name__ )
@@ -43,4 +42,5 @@ def health_insurance_predict( object ):
         
     
 if __name__ == '__main__':
+    port = os.environ.get( 'PORT', 5000 )
     app.run( '0.0.0.0', debug=True )
