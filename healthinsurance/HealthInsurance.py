@@ -4,7 +4,7 @@ import numpy as np
 
 class HealthInsurance( object ):
     def __init__( self ):
-        self.home_path = ''
+        self.home_path = '/home/jeffsmedines/repos/pa4/health_insurance_cross_sell/'
         self.annual_premium_scaler = pickle.load( open( self.home_path + 'src/features/annual_premium_scaler.pkl', 'rb' ) )
         self.age_scaler = pickle.load( open( self.home_path + 'src/features/age_scaler.pkl', 'rb' ) )
         self.vintage_scaler = pickle.load( open( self.home_path + 'src/features/vintage_scaler.pkl', 'rb' ) )
@@ -22,18 +22,26 @@ class HealthInsurance( object ):
 
         ## 1.7 Drop Columns
 
-        df1 = df1.drop( columns=['id.1', 'id.2'] )
+        if 'id.1'  in df1.columns:
+            df1 = df1.drop( columns='id.1' )
+        else:
+            pass
+
+        if 'id.2'  in df1.columns:
+            df1 = df1.drop( columns='id.2' )
+        else:
+            pass
 
         return df1
 
     def feature_engineering( self, df2 ):
         # vehicle_damage
-        df2['vehicle_damage'] = df2['vehicle_damage'].apply( lambda x: 1 if x == 'Yes' else 0 )
+        # df2['vehicle_damage'] = df2['vehicle_damage'].apply( lambda x: 1 if x == 'Yes' else 0 )
 
-        # vehicle_age
-        df2['vehicle_age'] = df2['vehicle_age'].apply( lambda x: 'below_1_year' if x == '< 1 Year' else 
-                                                                 'between_1_2_year' if x == '1-2 Year' else 
-                                                                 'over_2_years' )
+        # # vehicle_age
+        # df2['vehicle_age'] = df2['vehicle_age'].apply( lambda x: 'below_1_year' if x == '< 1 Year' else 
+        #                                                          'between_1_2_year' if x == '1-2 Year' else 
+        #                                                          'over_2_years' )
     
         return df2
 
@@ -58,7 +66,7 @@ class HealthInsurance( object ):
         df5.loc[:, 'gender'] = df5['gender'].map( self.target_encode_gender_scaler )
 
         # vehicle_age - one hot encoding / frequency encoding / order encoding
-        df5 = pd.get_dummies( df5, prefix='vehicle_age', columns=['vehicle_age'] )
+        # df5 = pd.get_dummies( df5, prefix='vehicle_age', columns=['vehicle_age'] )
 
         # policy_sales_channel - Target encoding / frequency encoding
         df5.loc[:, 'policy_sales_channel'] = df5['policy_sales_channel'].map( self.fe_policy_sales_channel_scaler )
@@ -75,4 +83,4 @@ class HealthInsurance( object ):
         # Join Predicton into Original Data
         original_data['prediction'] = pred[:, 1].tolist()
         
-        return original_data.to_json( orient='records', data_format='iso' )
+        return original_data.to_json( orient='records', date_format='iso' )
