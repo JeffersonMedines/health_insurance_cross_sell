@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 import numpy as np
 
-class HealthInsurance( object ):
+class HealthInsurance():
     def __init__( self ):
         self.home_path = ''
         self.annual_premium_scaler = pickle.load( open( self.home_path + 'src/features/annual_premium_scaler.pkl', 'rb' ) )
