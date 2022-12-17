@@ -36,12 +36,12 @@ class HealthInsurance( object ):
 
     def feature_engineering( self, df2 ):
         # vehicle_damage
-        # df2['vehicle_damage'] = df2['vehicle_damage'].apply( lambda x: 1 if x == 'Yes' else 0 )
+        df2['vehicle_damage'] = df2['vehicle_damage'].apply( lambda x: 1 if x == 'Yes' else 0 )
 
-        # # vehicle_age
-        # df2['vehicle_age'] = df2['vehicle_age'].apply( lambda x: 'below_1_year' if x == '< 1 Year' else 
-        #                                                          'between_1_2_year' if x == '1-2 Year' else 
-        #                                                          'over_2_years' )
+        # vehicle_age
+        df2['vehicle_age'] = df2['vehicle_age'].apply( lambda x: 'below_1_year' if x == '< 1 Year' else 
+                                                                 'between_1_2_year' if x == '1-2 Year' else 
+                                                                 'over_2_years' )
     
         return df2
 
@@ -66,7 +66,7 @@ class HealthInsurance( object ):
         df5.loc[:, 'gender'] = df5['gender'].map( self.target_encode_gender_scaler )
 
         # vehicle_age - one hot encoding / frequency encoding / order encoding
-        # df5 = pd.get_dummies( df5, prefix='vehicle_age', columns=['vehicle_age'] )
+        df5 = pd.get_dummies( df5, prefix='vehicle_age', columns=['vehicle_age'] )
 
         # policy_sales_channel - Target encoding / frequency encoding
         df5.loc[:, 'policy_sales_channel'] = df5['policy_sales_channel'].map( self.fe_policy_sales_channel_scaler )
