@@ -39,9 +39,9 @@ class HealthInsurance():
         df2['vehicle_damage'] = df2['vehicle_damage'].apply( lambda x: 1 if x == 'Yes' else 0 )
 
         # vehicle_age
-        df2['vehicle_age'] = df2['vehicle_age'].apply( lambda x: 'below_1_year' if x == '< 1 Year' else 
-                                                                 'between_1_2_year' if x == '1-2 Year' else 
-                                                                 'over_2_years' )
+        # df2['vehicle_age'] = df2['vehicle_age'].apply( lambda x: 'below_1_year' if x == '< 1 Year' else 
+        #                                                          'between_1_2_year' if x == '1-2 Year' else 
+        #                                                          'over_2_years' )
     
         return df2
 
