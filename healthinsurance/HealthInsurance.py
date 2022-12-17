@@ -66,7 +66,7 @@ class HealthInsurance():
         df5.loc[:, 'gender'] = df5['gender'].map( self.target_encode_gender_scaler )
 
         # vehicle_age - one hot encoding / frequency encoding / order encoding
-        df5 = pd.get_dummies( df5, prefix='vehicle_age', columns=['vehicle_age'] )
+        # df5 = pd.get_dummies( df5, prefix='vehicle_age', columns=['vehicle_age'] )
 
         # policy_sales_channel - Target encoding / frequency encoding
         df5.loc[:, 'policy_sales_channel'] = df5['policy_sales_channel'].map( self.fe_policy_sales_channel_scaler )
