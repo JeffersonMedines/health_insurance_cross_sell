@@ -56,21 +56,21 @@
 
 
 <h1>:bar_chart: Top 3 Insights de Negócio</h1>
-<p> ** 1. Clientes com maior idade compram mais seguros de carro. ** </p>
+<h3> 1. Clientes com maior idade compram mais seguros de carro. </h3>
 
-<p> **VERDADEIRA:** Clientes com maior idade compram mais seguros de carro até a idade de 44 anos. </p>
+<p> VERDADEIRA: Clientes com maior idade compram mais seguros de carro até a idade de 44 anos. </p>
 
 ![insight1](https://user-images.githubusercontent.com/93053350/208272583-7300acbc-da56-4a8f-8815-b291f54d2bc7.jpg)
 
-<p> ** 2. Clientes com planos de saúde mais caros, compram mais seguros de carro. ** </p>
+<h3> 2. Clientes com planos de saúde mais caros, compram mais seguros de carro. </h3>
 
-<p> **FALSA:** A maior concentração de clientes que compram seguros de carros está entre os clientes que pagam os menores valores de planos de saúde. </p>
+<p> FALSA: A maior concentração de clientes que compram seguros de carros está entre os clientes que pagam os menores valores de planos de saúde. </p>
 
 ![insight2](https://user-images.githubusercontent.com/93053350/208272661-a67a6ff2-5aaf-4ff3-a68c-ec2f5a3306ae.jpg)
 
-<p> ** 3. Clientes que são segurados a mais tempo pelo plano de saúde, compram mais seguros de carro. ** </p>
+<h3> 3. Clientes que são segurados a mais tempo pelo plano de saúde, compram mais seguros de carro. </h3>
 
-<p> **FALSA:** A quantidade de clientes que compram seguros de carro se mantém praticamente a mesma ao longo do tempo de plano de saúde. </p>
+<p> FALSA: A quantidade de clientes que compram seguros de carro se mantém praticamente a mesma ao longo do tempo de plano de saúde. </p>
 
 ![insight3](https://user-images.githubusercontent.com/93053350/208272757-e5c7663f-9c88-48c9-900e-dcb199aa2de8.jpg)
 
