@@ -9,19 +9,21 @@
 
 <h3>
 
-• [Problemas de Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#-problemas-de-neg%C3%B3cio-)
+• [Problemas de Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#mag_right-problemas-de-neg%C3%B3cio-)
 
-• [Premissas do Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#-premissas-do-neg%C3%B3cio-)
+• [Premissas do Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#gear-premissas-do-neg%C3%B3cio-)
 
-• [Planejamento da Solução](https://github.com/JeffersonMedines/health_insurance_cross_sell#-planejamento-da-solu%C3%A7%C3%A3o-)
+• [Planejamento da Solução](https://github.com/JeffersonMedines/health_insurance_cross_sell#computer-planejamento-da-solu%C3%A7%C3%A3o-)
 
-• [Machine Learning e Métricas de Performance](https://github.com/JeffersonMedines/health_insurance_cross_sell#-machine-learning-e-m%C3%A9tricas-de-performance-)
+• [Top 3 Insights de Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#bar_chart-top-3-insights-de-neg%C3%B3cio)
 
-• [Resultados Financeiros para o Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#-resultados-financeiros-para-o-neg%C3%B3cio-)
+• [Machine Learning e Métricas de Performance](https://github.com/JeffersonMedines/health_insurance_cross_sell#mechanical_arm-machine-learning-e-m%C3%A9tricas-de-performance-)
 
-• [Deploy do Modelo em Produção](https://github.com/JeffersonMedines/health_insurance_cross_sell#-deploy-do-modelo-em-produ%C3%A7%C3%A3o-)
+• [Resultados Financeiros para o Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#chart_with_upwards_trend-resultados-financeiros-para-o-neg%C3%B3cio-)
 
-• [Próximos Passos](https://github.com/JeffersonMedines/health_insurance_cross_sell#-pr%C3%B3ximos-passos-)
+• [Deploy do Modelo em Produção](https://github.com/JeffersonMedines/health_insurance_cross_sell#hammer_and_wrench-deploy-do-modelo-em-produ%C3%A7%C3%A3o-)
+
+• [Próximos Passos](https://github.com/JeffersonMedines/health_insurance_cross_sell#pushpin-pr%C3%B3ximos-passos-)
  
  </h3>
 
