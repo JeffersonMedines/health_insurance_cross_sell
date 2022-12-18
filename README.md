@@ -1,7 +1,7 @@
 ![insurance-producer_16](https://user-images.githubusercontent.com/93053350/208117801-629cf869-7d39-461d-b6e9-e41d12e59504.jpg)
 
 
-# Rankeamento dos Clientes Pela Propenção de Compra de um Segundo Seguro (Cross-Sell)
+# Health Insurance Cross-Sell
 
 
 
@@ -21,11 +21,11 @@
 
 • [Deploy do Modelo em Produção](https://github.com/JeffersonMedines/health_insurance_cross_sell#-deploy-do-modelo-em-produ%C3%A7%C3%A3o-)
 
-• [Próximos Passos](https://github.com/JeffersonMedines/health_insurance_cross_sell#-deploy-do-modelo-em-produ%C3%A7%C3%A3o-)
+• [Próximos Passos](https://github.com/JeffersonMedines/health_insurance_cross_sell#-pr%C3%B3ximos-passos-)
  
  </h3>
 
-<h1> Problemas de Negócio </h1>
+<h1>:mag_right: Problemas de Negócio </h1>
 
 <p> A Dafa Insurance é uma empresa que oferece o serviço de segura de vida para seus clientes e a equipe de produtos está analisando a possibilidade de oferecer aos seus segurados um novo produto, o seguro de carro. </p>
 
@@ -37,14 +37,14 @@
 
 <p> Porém, dada a capacidade de ligações diárias e o período em que a campanha será aplicada, o time de vendas conseguirá realizar apenas 20 mil ligações ofertando o novo produto durante essa campanha. Dessa forma, é necessário criar um modelo preditivo que classifique quais clientes estarão interessados em adquirir esse novo seguro de carro para que a equipe de vendas contate o maior número de interessados possível. </p>
 
-<h1> Premissas do Negócio </h1>
+<h1>:gear: Premissas do Negócio </h1>
 
 <p> Policy Sales Channel: Essa variável indica qual a forma que o cliente deseja ser contatado, tendo mais de 160 valores diferentes, não é passado nenhuma informação se cada valor expressa cada meio de contato ou se existem grupos e valores que expressam o mesmo meio de contato mas que de alguma forma se diferencie. Por isso, será assumido que cada valor expressa um meio de contato diferente. </p>
 
 <p> Como não é informado o valor do preço do seguro de carro e nem o custo de ligação para o cliente, para fins de tradução do desempenho do modelo para retorno financeiro para o negócio, será assumido que a média anual do preço do seguro de carro ofertado seja de R$ 2.000,00 e que o custo de ligação para entrar em contato com o cliente oferecendo o produto seja de R$ 100,00. </p>
 
 
-<h1> Planejamento da Solução </h1>
+<h1>:computer: Planejamento da Solução </h1>
 
 <p> Este projeto será desenvolvido com base no Processo Padrão Inter-Indústrias para Mineração de Dados (CRISP-DM). Uma metodologia padronizada de projetos de ciência de dados com etapas bem definidas e ordenadas: entendimento do negócio, entendimento dos dados, prepração dos dados, modelagem, avaliação e implementação. Dessa forma, quando utilizamos a metodologia CRIPS-DM, o projeto de ciência de dados passa a ter um ciclo de vida circular. Mesmo quando o projeto chega na etapa de implementação, o projeto pode ser novamente iniciado pela etapa de entendimento do negócio. </p>
 
@@ -55,7 +55,26 @@
 ![crisp dm](https://user-images.githubusercontent.com/93053350/208129563-6f933191-f522-4603-bf98-06b3f0db9937.jpg)
 
 
-<h1> Machine Learning e Métricas de Performance </h1>
+<h1>:bar_chart: Top 3 Insights de Negócio</h1>
+<p> ** 1. Clientes com maior idade compram mais seguros de carro. ** </p>
+
+<p> **VERDADEIRA:** Clientes com maior idade compram mais seguros de carro até a idade de 44 anos. </p>
+
+![insight1](https://user-images.githubusercontent.com/93053350/208272583-7300acbc-da56-4a8f-8815-b291f54d2bc7.jpg)
+
+<p> ** 2. Clientes com planos de saúde mais caros, compram mais seguros de carro. ** </p>
+
+<p> **FALSA:** A maior concentração de clientes que compram seguros de carros está entre os clientes que pagam os menores valores de planos de saúde. </p>
+
+![insight2](https://user-images.githubusercontent.com/93053350/208272661-a67a6ff2-5aaf-4ff3-a68c-ec2f5a3306ae.jpg)
+
+<p> ** 3. Clientes que são segurados a mais tempo pelo plano de saúde, compram mais seguros de carro. ** </p>
+
+<p> **FALSA:** A quantidade de clientes que compram seguros de carro se mantém praticamente a mesma ao longo do tempo de plano de saúde. </p>
+
+![insight3](https://user-images.githubusercontent.com/93053350/208272757-e5c7663f-9c88-48c9-900e-dcb199aa2de8.jpg)
+
+<h1>:mechanical_arm: Machine Learning e Métricas de Performance </h1>
 
 <p> Para avaliar o desempenho dos algoritmos de machine learning, foram selecionadas duas métricas, Precision@K e Racall@K. A métrica precision mede o desempenho do modelo apenas em relação as previsões que o modelo fez, ou seja, uma precision de 0.25 nos diz que a cada 4 previsões que o modelo fizer dizendo que o cliente tem interesse, ele irá acertar 1 onde o cliente de fato tinha interesse. Já a métrica recall nos mostra o desempenho do modelo em relação a todos os dados, tanto aqueles que o algoritmo classificou, tanto aqueles que ele não classificou, logo, uma recall de 0.25 nos diz que de todos os clientes interessados nessa base de dados, o nosso modelo conseguiu prever 25% deles. </p>
 
@@ -104,7 +123,7 @@
 <p> Após utilizar o conjunto de valores obtidos no random search, o modelo teve uma pequena melhora. </p>
 
 
-<h1> Resultados Financeiros para o Negócio </h1>
+<h1>:chart_with_upwards_trend: Resultados Financeiros para o Negócio </h1>
 
 <h3> Total Performance </h3>
 
@@ -130,7 +149,7 @@
 
 <p> Dada as circunstâncias da campanha de poder entrar em contato com apenas 20 mil clientes, o retorno financeiro do modelo baseline é de R$ 2.814.000,00, enquanto que o retorno do modelo XGBoost fica em R$ 11.698.000,00, um retorno 75,94% maior. </p>
 
-<h1> Deploy do Modelo em Produção </h1>
+<h1>:hammer_and_wrench: Deploy do Modelo em Produção </h1>
 
 <p> O modelo foi colocado em produção utilizando o Google Sheets. O aplicativo de planilhas do google funciona como o Excel e já é muito utilizado por diversas empresas para lidar com os dados. Nele é possível criar scripts para personalizar diversas características das planilhas, por meio do script criei um botão chamado "Propensity Score" que ao clicar abre um menu para outros botões que executam comandos, quando clicamos no botão "Get Prediction" do menu, automaticamente o script pega os dados que estão na planilha, e envia em formato json para a API onde o modelo está hospedado e faz uma requisição, então a API que devolve a previsão para esses dados, e então é criada uma nova coluna na planilha chamada "Score" com a propensão de interesse no novo seguro de carro de cada cliente, ao ordernar os clientes pelos valores mais altos na coluna Score, obtemos a lista que a equipe de vendas deve utilizar.  </p>
 
@@ -140,6 +159,6 @@
 https://user-images.githubusercontent.com/93053350/208271969-898c2e16-25da-457e-8e39-8f07036f9010.mp4
 
 
-<h1> Próximos Passos </h1>
+<h1>:pushpin: Próximos Passos </h1>
 
 <p> Procurar artigos específicos sobre o problema de learn to rank para aplicar novos algoritmos de machine learning que desempenhem e aprender novas técnicas de modelagem aplicáveis a esse tipo de problema. Obter uma melhora de 15% na Precision@K do atual modelo é uma meta para uma próxima iteração do CRISP-DM. </p>
