@@ -9,17 +9,19 @@
 
 <h3>
 
-• [Problemas de Negócio](https://github.com/JeffersonMedines/rossmann_store_sales/blob/main/README.md#-problemas-de-neg%C3%B3cio-)
+• [Problemas de Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#-problemas-de-neg%C3%B3cio-)
 
-• [Premissas do Negócio](https://github.com/JeffersonMedines/rossmann_store_sales/blob/main/README.md#-premissas-do-neg%C3%B3cio-)
+• [Premissas do Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#-premissas-do-neg%C3%B3cio-)
 
-• [Planejamento da Solução](https://github.com/JeffersonMedines/rossmann_store_sales/blob/main/README.md#-planejamento-da-solu%C3%A7%C3%A3o-)
+• [Planejamento da Solução](https://github.com/JeffersonMedines/health_insurance_cross_sell#-planejamento-da-solu%C3%A7%C3%A3o-)
 
-• [Machine Learning e Métricas de Performance](https://github.com/JeffersonMedines/rossmann_store_sales/blob/main/README.md#-machine-learning-e-m%C3%A9tricas-de-performance-)
+• [Machine Learning e Métricas de Performance](https://github.com/JeffersonMedines/health_insurance_cross_sell#-machine-learning-e-m%C3%A9tricas-de-performance-)
 
-• [Resultados Financeiros para o Negócio](https://github.com/JeffersonMedines/rossmann_store_sales/blob/main/README.md#-resultados-financeiros-para-o-neg%C3%B3cio-)
+• [Resultados Financeiros para o Negócio](https://github.com/JeffersonMedines/health_insurance_cross_sell#-resultados-financeiros-para-o-neg%C3%B3cio-)
 
-• [Deploy do Modelo em Produção](https://github.com/JeffersonMedines/rossmann_store_sales/blob/main/README.md#-deploy-do-modelo-com-o-bot-do-telegram-)
+• [Deploy do Modelo em Produção](https://github.com/JeffersonMedines/health_insurance_cross_sell#-deploy-do-modelo-em-produ%C3%A7%C3%A3o-)
+
+• [Próximos Passos](https://github.com/JeffersonMedines/health_insurance_cross_sell#-deploy-do-modelo-em-produ%C3%A7%C3%A3o-)
  
  </h3>
 
@@ -130,9 +132,14 @@
 
 <h1> Deploy do Modelo em Produção </h1>
 
-<p> O modelo foi colocado em produção utilizando o Google Sheets. O aplicativo de planilhas do google funciona como o Excel e já é muito utilizado por diversas empresas para lidar com os dados. Nele é possível criar scripts para personalizar diversas coisas nas planilhas, por meio do script criei um botão que ao clicar, automaticamente pega os dados que estarão na planilha, e envia em formato json para a API onde o modelo está hospedado, que devolve a previsão para esses dados, e então é criada uma nova coluna na planilha com a propensão de interesse no novo seguro de carro de cada cliente.  </p>
+<p> O modelo foi colocado em produção utilizando o Google Sheets. O aplicativo de planilhas do google funciona como o Excel e já é muito utilizado por diversas empresas para lidar com os dados. Nele é possível criar scripts para personalizar diversas características das planilhas, por meio do script criei um botão chamado "Propensity Score" que ao clicar abre um menu para outros botões que executam comandos, quando clicamos no botão "Get Prediction" do menu, automaticamente o script pega os dados que estão na planilha, e envia em formato json para a API onde o modelo está hospedado e faz uma requisição, então a API que devolve a previsão para esses dados, e então é criada uma nova coluna na planilha chamada "Score" com a propensão de interesse no novo seguro de carro de cada cliente, ao ordernar os clientes pelos valores mais altos na coluna Score, obtemos a lista que a equipe de vendas deve utilizar.  </p>
 
-<p> Dessa forma, a utilização da solução pela equipe de vendas da empresa se torna super prática e inclusiva já que não será necessário fazer algum tipo de requisição a API ou banco de dados, possibilitando também fazer diversas análises diretamente aonde a equipe de venda trabalha com os dados (planilha do Google Sheets). </p>
+<p> Dessa forma, a utilização da solução pela equipe de vendas da empresa se torna super prática e inclusiva já que não será necessário fazer algum tipo de requisição a API ou banco de dados, possibilitando também fazer diversas análises diretamente aonde a equipe de venda trabalha com os dados (planilha do Google Sheets). No vídeo a seguir, tem um exemplo de como ficou o resultado final do modelo em produção utilizando o script. </p>
 
 
+https://user-images.githubusercontent.com/93053350/208271969-898c2e16-25da-457e-8e39-8f07036f9010.mp4
 
+
+<h1> Próximos Passos </h1>
+
+<p> Procurar artigos específicos sobre o problema de learn to rank para aplicar novos algoritmos de machine learning que desempenhem e aprender novas técnicas de modelagem aplicáveis a esse tipo de problema. Obter uma melhora de 15% na Precision@K do atual modelo é uma meta para uma próxima iteração do CRISP-DM. </p>
