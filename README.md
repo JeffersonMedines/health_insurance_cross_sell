@@ -31,7 +31,7 @@
 
 <p> A Dafa Insurance é uma empresa que oferece o serviço de segura de vida para seus clientes e a equipe de produtos está analisando a possibilidade de oferecer aos seus segurados um novo produto, o seguro de carro. </p>
 
-<p> Assim como no seguro de saúde, os clientes desse novo seguro de carro devem pagar um valor anual à Dafa Insurance para poder receber um valor segurado pela empresa caso o segurado venha a sofrer algum tipo acidente ou dano no veículo. Por exemplo, um segurado que pague R$ 5.000,00 ao ano para ter o seguro de saúde que tem uma cobertura de R$ 100.000,00, caso tenha a infeicidade de ser hospitalizado por algum motivo, terá suas despezas pagas pela segurado até o valor de R$ 100.000,00 desde que esteja em dia com sua obrigação de pagar o valor anual de R$ 5.000,00 paga a seguradora. </p>
+<p> Assim como no seguro de saúde, os clientes desse novo seguro de carro devem pagar um valor anual à Dafa Insurance para poder receber um valor segurado pela empresa caso o segurado venha a sofrer algum tipo acidente ou dano no veículo. Por exemplo, um segurado que pague R$ 5.000,00 ao ano para ter o seguro de saúde que tem uma cobertura de R$ 100.000,00, caso tenha a infelicidade de ser hospitalizado por algum motivo, terá suas despezas pagas pela segurado até o valor de R$ 100.000,00 desde que esteja em dia com sua obrigação de pagar o valor anual de R$ 5.000,00 paga a seguradora. </p>
 
 <p> A Dafa Insurance realizou uma pesquisa com aproximadamente 380.000 clientes que consomem seu serviço de plano de saúde para saber seu interesse em adquirir um novo seguro de carro. As informações sobre cada cliente foram armazenadas em um banco de dados juntamente com a resposta em relação ao seu interesse ao novo produto. </p>
 
