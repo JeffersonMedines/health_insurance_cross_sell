@@ -35,7 +35,7 @@
 
 <p> A Dafa Insurance realizou uma pesquisa com aproximadamente 380.000 clientes que consomem seu serviço de plano de saúde para saber seu interesse em adquirir um novo seguro de carro. As informações sobre cada cliente foram armazenadas em um banco de dados juntamente com a resposta em relação ao seu interesse ao novo produto. </p>
 
-<p> A equipe de produtos selecionou 132 mil novos clientes que não responderam a pesquisa sobre o interesse ao novo produto para participarem a uma campanha que será ofertado esse novo produto de seguro de carro. O contato aos clintes será feito através de ligações telefônicas feitas pelo time de vendas. </p>
+<p> A equipe de produtos selecionou 80 mil novos clientes que não responderam a pesquisa sobre o interesse ao novo produto para participarem a uma campanha que será ofertado esse novo produto de seguro de carro. O contato aos clintes será feito através de ligações telefônicas feitas pelo time de vendas. </p>
 
 <p> Porém, dada a capacidade de ligações diárias e o período em que a campanha será aplicada, o time de vendas conseguirá realizar apenas 20 mil ligações ofertando o novo produto durante essa campanha. Dessa forma, é necessário criar um modelo preditivo que classifique quais clientes estarão interessados em adquirir esse novo seguro de carro para que a equipe de vendas contate o maior número de interessados possível. </p>
 
